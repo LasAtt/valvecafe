@@ -3,7 +3,6 @@ const app = express();
 const request = require('request');
 const port = 3000;
 
-
 const listoptions = {
     uri: 'restaurants/',
     baseUrl: 'http://hyy-lounastyokalu-production.herokuapp.com/publicapi/',
