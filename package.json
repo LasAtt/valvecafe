@@ -1,0 +1,20 @@
+{
+  "name": "kumpulamenu",
+  "version": "1.0.0",
+  "description": "restapi for daily menus in unicafes on university of helsinki kumpulan kampus",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node index.js"
+  },
+  "author": "serdion",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.79.0",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
