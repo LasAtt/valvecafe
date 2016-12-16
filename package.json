@@ -1,11 +1,11 @@
 {
   "name": "kumpulamenu",
   "version": "1.0.0",
-  "description": "restapi for daily menus in unicafes on university of helsinki kumpulan kampus",
+  "description": "restapi for daily menus in unicafes on university of helsinki",
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "serdion",
   "license": "ISC",
