@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
+    "testapp": "node testapp.js",
     "start": "node server.js"
   },
   "author": "serdion",

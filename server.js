@@ -15,7 +15,6 @@ router.route('/restaurants')
         .get(function (req, res) {
             request(util.buildRequest('restaurants'), function (error, response, body) {
                 if (!error && response.statusCode === 200) {
-                    console.log(body);
                     res.send(body);
                 }
             });
@@ -34,6 +33,12 @@ router.route('/exactum')
         .get(function (req, res) {
             res.send(unicafe.exactum());
         });
+
+router.route('/chemicum')
+        .get(function (req, res) {
+            res.send(unicafe.chemicum());
+        });
+
 
 app.use('/api', router);
 
