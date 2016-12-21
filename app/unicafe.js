@@ -13,6 +13,8 @@ request(util.buildRequest('restaurant/' + exactum_id), function (error, response
     }
 });
 
+
+
 var chemicum_data = {};
 
 request(util.buildRequest('restaurant/' + chemicum_id), function (error, response, body) {
