@@ -1,6 +1,6 @@
 module.exports = function(req, res) {
-  const date = new Date(req.params.date);
-  req.collection.find(
+    const date = new Date(req.params.date);
+    req.collection.find(
                       {'menus.date': date},
                       {fields: {_id: 0, business: 0}
                       , orderBy: {_id: 1}}
