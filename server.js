@@ -5,7 +5,7 @@ var express = require('express'),
 var app = express();
 var router = require('./routes/index.js');
 
-var db = monk('localhost:27017/kumpulamenu');
+var db = monk(process.env.MONGO_PORT_27017_TCP_ADDR+':'+process.env.MONGO_PORT_27017_TCP_PORT+'/kumpulamenu');
 
 var port = 3000;
 
