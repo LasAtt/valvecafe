@@ -1,11 +1,12 @@
 var express = require('express'),
         monk = require('monk'),
-        initdata = require('./util/initdata');
+        initdata = require('./util').initdata;
 
 var app = express();
 var router = require('./routes/index.js');
 
-var db = monk(process.env.MONGO_PORT_27017_TCP_ADDR+':'+process.env.MONGO_PORT_27017_TCP_PORT+'/kumpulamenu');
+//var db = monk(process.env.MONGO_PORT_27017_TCP_ADDR+':'+process.env.MONGO_PORT_27017_TCP_PORT+'/kumpulamenu');
+var db = monk('localhost:27017/kumpulamenu')
 
 var port = 3000;
 
@@ -13,6 +14,7 @@ initdata(db);
 setInterval(initdata, 8640000, db);
 
 app.use(function (req, res, next) {
+    console.log(req);
     req.collection = db.get('restaurants');
     next();
 });

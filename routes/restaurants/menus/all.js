@@ -1,6 +1,16 @@
-module.exports = function(req, res) {
-    const _id = req.params._id * 1;
-    req.collection.findOne({_id: _id}, {fields: {_id: 0, business: 0}}).then(function (data) {
-        res.send(data);
+module.exports = function (req, res) {
+    console.log('hello');
+    var _id = req.params._id * 1;
+    var query = req.query.date ?
+            {_id: _id, 'menus.date': new Date(req.query.date)} : {_id: _id};
+    req.collection.findOne(query, {fields: {_id: 1, areacode: 1, menus: 1}}).then(function (result) {
+        if (!query['menus.date']) {
+            res.send(result);
+            return;
+        }
+        result.menus = result.menus.filter(function (value) {
+            return value.date.getTime() === query['menus.date'].getTime();
+        });
+        res.send(result);
     });
-}
+};

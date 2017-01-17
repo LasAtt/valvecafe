@@ -26,11 +26,12 @@ function matchDate(string) {
     return new Date(year + '-' + date[1] + '-' + date[0]);
 }
 
-function format(_id, data) {
+function format(_id, areacode, data) {
     var restaurant = {};
     restaurant._id = _id;
     restaurant.name = data.information.restaurant;
     restaurant.business = [];
+    restaurant.areacode = areacode;
     menus = [];
     restaurant.menus = menus;
 
