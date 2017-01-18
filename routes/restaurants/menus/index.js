@@ -3,6 +3,6 @@ const router = require('express').Router({mergeParams: true})
       , date = require('./singledate');
 
 router.get('/', all);
-router.get('/:date', date)
+router.get('/:date', date);
 
 module.exports = router;

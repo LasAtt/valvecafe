@@ -6,10 +6,9 @@ const router = require('express').Router()
        , menus = require('./menus');
 
 router.get('/', all);
-router.get('/:_id', single);
 router.use('/:_id/menus', menus);
-router.get('/menus', restaurantmenus);
+router.use('/menus', restaurantmenus);
 router.get('/menus/:date', datemenus);
-
+router.get('/:_id', single);
 
 module.exports = router;

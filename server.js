@@ -14,7 +14,6 @@ initdata(db);
 setInterval(initdata, 8640000, db);
 
 app.use(function (req, res, next) {
-    console.log(req);
     req.collection = db.get('restaurants');
     next();
 });

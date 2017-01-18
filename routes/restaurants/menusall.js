@@ -1,8 +1,8 @@
-const router = require('express').Router();
 
-router.get('/menus', function (req, res) {
+module.exports = function (req, res) {
     var date = new Date();
     if (req.query.date) {
+        console.log("hello");
         date = new Date(req.query.date);
     }
     var query = {'menus.date': date};
@@ -15,6 +15,6 @@ router.get('/menus', function (req, res) {
                 });
                 res.send(result);
             });
-});
+};
 
-module.exports = router;
+

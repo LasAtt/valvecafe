@@ -1,5 +1,4 @@
 module.exports = function (req, res) {
-    console.log('hello');
     var _id = req.params._id * 1;
     var query = req.query.date ?
             {_id: _id, 'menus.date': new Date(req.query.date)} : {_id: _id};
