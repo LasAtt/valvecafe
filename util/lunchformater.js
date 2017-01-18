@@ -1,6 +1,5 @@
 //var restaurant = {
 //    name,
-//    business,
 //    days = [
 //        {
 //            date,
@@ -26,11 +25,11 @@ function matchDate(string) {
     return new Date(year + '-' + date[1] + '-' + date[0]);
 }
 
-function format(_id, data) {
+function format(_id, areacode, data) {
     var restaurant = {};
     restaurant._id = _id;
     restaurant.name = data.information.restaurant;
-    restaurant.business = [];
+    restaurant.areacode = areacode;
     menus = [];
     restaurant.menus = menus;
 
@@ -39,7 +38,7 @@ function format(_id, data) {
         if (menu.data.length === 0) {
             return;
         }
-        menus[i] = {}
+        menus[i] = {};
         menus[i].date = matchDate(menu.date);
         var lunch = [];
         menus[i].lunch = lunch;
