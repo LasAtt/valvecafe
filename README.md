@@ -3,6 +3,8 @@ kumpulamenu
 
 NodeJS RESTful API for reading lunch data for University of Helsinki lunch menus.
 
+Try it out [here](https://serd.io/kumpulamenu)
+
 **Routes**
 * ```/restaurants``` find all restaurants
 * ```/restaurants/{id}``` find a single restaurant
