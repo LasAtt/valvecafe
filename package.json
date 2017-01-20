@@ -1,5 +1,5 @@
 {
-  "name": "kumpulamenu",
+  "name": "valvecafe",
   "version": "1.0.0",
   "description": "restapi for daily menus in unicafes on university of helsinki",
   "main": "index.js",
@@ -23,6 +23,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/serdion/kumpulamenu.git"
+    "url": "git@github.com/serdion/valvecafe.git"
   }
 }
